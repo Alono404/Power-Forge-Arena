@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stickman Powers</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="title-bar">
+      <h1>Stickman Powers Arena</h1>
+      <p class="subtitle">Choose your anime power and battle!</p>
+    </header>
+
+    <main>
+      <section id="screen-main" class="screen active">
+        <h2>Main Menu</h2>
+        <div class="button-stack">
+          <button id="play-button" class="primary">Play</button>
+          <button class="secondary" disabled>Settings (Coming Soon)</button>
+        </div>
+      </section>
+
+      <section id="screen-powers" class="screen">
+        <h2>Select Your Power</h2>
+        <p class="hint">Pick one power before entering the arena.</p>
+        <div class="power-grid" id="power-grid"></div>
+        <div class="button-row">
+          <button id="powers-back" class="secondary">Back</button>
+          <button id="powers-next" class="primary" disabled>Continue</button>
+        </div>
+      </section>
+
+      <section id="screen-mode" class="screen">
+        <h2>Choose Opponent</h2>
+        <p class="hint">Fight the AI or jump into online matchmaking.</p>
+        <div class="button-stack">
+          <button id="mode-ai" class="primary">Versus AI</button>
+          <button id="mode-online" class="primary">Versus Online Player</button>
+          <button class="secondary" disabled>Settings (Coming Soon)</button>
+          <button id="mode-back" class="secondary">Back</button>
+        </div>
+      </section>
+
+      <section id="screen-online" class="screen">
+        <h2>Online Matchmaking</h2>
+        <p class="hint">Find a rival to battle with your chosen power.</p>
+        <div class="match-panel">
+          <div>
+            <p class="label">Status</p>
+            <p id="online-status" class="status">Disconnected</p>
+          </div>
+          <div>
+            <p class="label">Queue</p>
+            <p id="online-queue" class="status">0 players</p>
+          </div>
+          <div>
+            <p class="label">Opponent</p>
+            <p id="online-opponent" class="status">None yet</p>
+          </div>
+        </div>
+        <div class="button-stack">
+          <button id="online-connect" class="primary">Connect</button>
+          <button id="online-start" class="primary" disabled>Start Match</button>
+          <button class="secondary" disabled>Settings (Coming Soon)</button>
+          <button id="online-back" class="secondary">Back</button>
+        </div>
+      </section>
+
+      <section id="screen-battle" class="screen">
+        <h2>Battle</h2>
+        <div class="battle-status">
+          <div class="fighter">
+            <h3>You</h3>
+            <p id="player-power" class="power-label"></p>
+            <div class="hp-bar"><span id="player-hp"></span></div>
+          </div>
+          <div class="fighter">
+            <h3 id="enemy-name">Opponent</h3>
+            <p id="enemy-power" class="power-label"></p>
+            <div class="hp-bar"><span id="enemy-hp"></span></div>
+          </div>
+        </div>
+        <div class="log" id="battle-log"></div>
+        <div class="button-row">
+          <button id="attack-button" class="primary">Attack</button>
+          <button class="secondary" disabled>Settings (Coming Soon)</button>
+        </div>
+      </section>
+
+      <section id="screen-win" class="screen">
+        <h2>You Win!</h2>
+        <p class="hint">Victory is yours. What next?</p>
+        <div class="button-stack">
+          <button id="win-continue" class="primary">Continue</button>
+          <button id="win-retry" class="secondary">Retry</button>
+          <button class="secondary" disabled>Settings (Coming Soon)</button>
+        </div>
+      </section>
+
+      <section id="screen-lose" class="screen">
+        <h2>You Lose!</h2>
+        <p class="hint">Defeat this time. Rise again?</p>
+        <div class="button-stack">
+          <button id="lose-continue" class="primary">Continue</button>
+          <button id="lose-retry" class="secondary">Retry</button>
+          <button class="secondary" disabled>Settings (Coming Soon)</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
